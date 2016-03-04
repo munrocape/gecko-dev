@@ -45,7 +45,7 @@ To test this, I targeted the test file I was editing by using the command `./mac
 
 Before pushing my patch to the mozilla review board, I ran the full suite of marionette tests using `./mach marionette-test`.
 
-To ensure that the branch was executing, I changed the self.platform attribute to return `darwin`. This confirmed that the branch would now execute when the platform was Darwin.
+To ensure that the branch was executing, I changed the self.platform attribute to return `darwin`. This confirmed that the branch would now execute when the platform was Darwin, and included a print statement within the `if` block. I removed this before committing as this was more of a sanity check than something that should be included. The reason I did this is because I was developing within a Linux Mint VM and would not execute the Windows NT or Darwin conditionals.
 
 I then pushed to reviewboard for feedback. The mentor seemed pleased with the work based on Bugzilla comments.
 
